@@ -13,3 +13,11 @@ VERSION 15 — Corrections demandées
 - La page d'accueil interactive et les animations de l'enveloppe sont conservées.
 - Le bouton de la carte affiche désormais « Cliquez pour afficher l’invitation statique » et ouvre le PDF validé dans un nouvel onglet.
 - Le PDF reste dans assets/Invitation_Tequila_Sunset_Ricia.pdf.
+
+
+VERSION 21 — AJUSTEMENTS MOBILE
+- Les informations de la carte restent sur deux colonnes sur téléphone, avec largeur contrainte et textes adaptés pour éviter tout débordement.
+- Les espacements du contenu révélé, de l’en-tête, du montage photo et du pied de page sont harmonisés sur mobile.
+- Le pied de page comporte la mention : BY KAREL HORTY · © 2026 — TOUS DROITS RÉSERVÉS.
+- L’affiche d’accueil utilise une version WebP optimisée (tequila-sunset-cover.webp, environ 227 Ko au lieu de 2,48 Mo). Le PDF original est conservé et n’est ouvert qu’à la demande.
+- L’URL RSVP Google Apps Script, les champs du formulaire, les photos et le PDF sont conservés.

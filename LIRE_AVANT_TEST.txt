@@ -23,3 +23,11 @@ Mise à jour de préparation au déploiement :
 - Sur téléphone, le navigateur peut ouvrir sa boîte d'impression ou proposer « Enregistrer au format PDF » selon le système utilisé.
 - Le formulaire RSVP conserve l'URL Apps Script déjà configurée. Comme l'envoi utilise no-cors, vérifier une réponse réelle dans Google Sheets après déploiement.
 - Aucun déploiement GitHub/Vercel n'a été effectué par cette modification locale.
+
+
+TESTS À EFFECTUER SUR LA VERSION 21
+1. Sur iPhone, vérifier que les six cartes d’informations restent en deux colonnes et qu’aucune carte ne dépasse de l’écran.
+2. Ouvrir l’invitation et vérifier que le contenu apparaît sans grande zone vide.
+3. Vérifier le montage photo, les marges et le pied de page, notamment la mention « TOUS DROITS RÉSERVÉS ».
+4. Tester l’ouverture du PDF et l’envoi d’une réponse RSVP ; vérifier la réponse dans Google Sheets.
+5. Contrôler aussi sur un téléphone Android et sur ordinateur.
