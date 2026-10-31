@@ -1,0 +1,25 @@
+TEQUILA SUNSET — RICIA
+
+Cette version conserve la taille de l'enveloppe et le formulaire RSVP existant.
+
+Améliorations apportées :
+- Les images de fleurs, agrumes et cocktail fournies par Ricia sont utilisées directement.
+- Le damier de prévisualisation de l'image d'agrumes et le fond blanc du cocktail sont rendus transparents autant que possible.
+- La boule disco est stylisée en CSS, sans remplacer les images de fleurs, d'agrumes ou de cocktail.
+- Au clic sur l'enveloppe, le rabat s'ouvre, la carte d'invitation sort de l'enveloppe, puis le site principal apparaît avec un défilement vers la carte.
+- Le délai a été ajusté pour laisser la carte finir son animation avant la transition.
+
+À vérifier après ouverture locale ou déploiement :
+1. Tester le clic sur l'enveloppe sur ordinateur et téléphone.
+2. Vérifier que les images et les polices web chargent avec une connexion Internet.
+3. Envoyer une réponse RSVP de test et vérifier son apparition dans Google Sheets.
+
+Important : le navigateur ne peut pas confirmer à lui seul la bonne écriture dans Google Sheets lorsque Apps Script est appelé en mode no-cors. Vérifier la feuille de réponses après le test.
+
+
+Mise à jour de préparation au déploiement :
+- Le bouton de l'invitation est libellé « Télécharger mon invitation en PDF ».
+- La feuille d'impression a été corrigée pour afficher la carte d'invitation (le conteneur parent n'est plus masqué à l'impression).
+- Sur téléphone, le navigateur peut ouvrir sa boîte d'impression ou proposer « Enregistrer au format PDF » selon le système utilisé.
+- Le formulaire RSVP conserve l'URL Apps Script déjà configurée. Comme l'envoi utilise no-cors, vérifier une réponse réelle dans Google Sheets après déploiement.
+- Aucun déploiement GitHub/Vercel n'a été effectué par cette modification locale.

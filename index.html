@@ -1,0 +1,901 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#ff69b4">
+<title>Tequila Sunset — Ricia's 22nd Birthday</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&family=Dancing+Script:wght@500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+:root{--pink:#ff69b4;--magenta:#d72d78;--orange:#ff7438;--coral:#ff5b55;--butter:#ffe58a;--cream:#fff7e9;--ink:#321820;--line:#e7bda9}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:'DM Sans',Arial,sans-serif}
+button,input,select{font:inherit}
+button{cursor:pointer}
+a{color:inherit}
+.topbar{display:flex;justify-content:space-between;align-items:center;padding:18px 22px;border-bottom:1px solid #dcb6a6;font:600 10px 'Space Grotesk',sans-serif;letter-spacing:.16em;text-transform:uppercase}
+.topbar .mark{font-size:12px;letter-spacing:.12em}
+.topbar .date{color:var(--magenta)}
+.hero{max-width:1200px;margin:auto;padding:clamp(25px,5vw,60px) clamp(16px,4vw,56px) 60px;position:relative;overflow:hidden}
+.hero-label{display:flex;align-items:center;gap:12px;font:600 10px 'Space Grotesk',sans-serif;letter-spacing:.2em;text-transform:uppercase}
+.hero-label:before{content:"";width:36px;height:1px;background:var(--magenta)}
+.hero-title{position:relative;z-index:1;margin:20px 0 0;font:600 clamp(76px,15vw,180px)/.82 'Dancing Script',cursive;letter-spacing:-.045em;text-transform:none;color:var(--magenta)}
+.hero-title .second{display:block;text-align:right;color:var(--orange);font-style:normal;font-weight:600;padding-right:1%}
+.hero-subline{display:flex;align-items:center;justify-content:space-between;gap:15px;margin:26px 0 0;font:600 10px 'Space Grotesk',sans-serif;letter-spacing:.17em;text-transform:uppercase}
+.hero-subline .pill{background:var(--butter);padding:10px 13px;border-radius:50px}
+.hero-collage{position:relative;max-width:930px;height:clamp(330px,58vw,610px);margin:25px auto 0}
+.sunburst{position:absolute;right:4%;top:1%;width:clamp(90px,19vw,200px);aspect-ratio:1;border-radius:50%;background:var(--butter);display:grid;place-items:center;color:var(--magenta);font:italic 500 clamp(15px,2vw,24px) 'Playfair Display',serif;transform:rotate(10deg);z-index:0}
+.sunburst:before{content:"";position:absolute;inset:-12px;border:1px solid var(--orange);border-radius:50%;transform:rotate(-12deg)}
+.photo-main{position:absolute;left:10%;top:7%;width:47%;height:82%;object-fit:cover;object-position:center 22%;border-radius:48% 48% 2px 2px;z-index:1;filter:saturate(.92)}
+.photo-small{position:absolute;right:7%;bottom:5%;width:32%;height:47%;object-fit:cover;object-position:center 20%;border:8px solid var(--cream);z-index:2;transform:rotate(5deg)}
+.sticker{position:absolute;left:1%;bottom:5%;z-index:3;background:var(--coral);color:#fff7e9;width:clamp(90px,16vw,160px);aspect-ratio:1;border-radius:50%;display:grid;place-items:center;text-align:center;padding:12px;font:600 clamp(11px,1.5vw,17px)/1.1 'Space Grotesk',sans-serif;text-transform:uppercase;transform:rotate(-12deg)}
+.flower{position:absolute;font-size:clamp(42px,8vw,90px);z-index:3;filter:saturate(1.1)}
+.flower.one{left:52%;top:0;transform:rotate(15deg)}
+.flower.two{right:1%;top:45%;transform:rotate(-14deg)}
+.hero-bottom{display:grid;grid-template-columns:1fr auto;gap:20px;align-items:end;margin-top:14px;border-top:1px solid var(--line);padding-top:17px}
+.hero-bottom p{max-width:420px;margin:0;font-size:13px;line-height:1.6}
+.eyebrow{font:600 10px 'Space Grotesk',sans-serif;letter-spacing:.2em;text-transform:uppercase;color:var(--magenta)}
+.date-lockup{text-align:right;font:600 12px 'Space Grotesk',sans-serif;line-height:1.6}
+.section{padding:clamp(54px,8vw,110px) clamp(18px,5vw,70px)}
+.section.dark{background:var(--magenta);color:var(--cream)}
+.section.orange{background:var(--orange);color:var(--ink)}
+.section-head{max-width:1100px;margin:0 auto 35px;display:flex;justify-content:space-between;align-items:end;gap:25px}
+.section-head h2{font:600 clamp(48px,8vw,96px)/.9 'Dancing Script',cursive;letter-spacing:-.025em;margin:12px 0 0}
+.section-head p{max-width:300px;font-size:13px;line-height:1.6;margin:0}
+.dark .eyebrow{color:var(--butter)}
+.envelope-area{max-width:1100px;margin:auto;display:grid;grid-template-columns:1fr 1fr;gap:clamp(25px,6vw,80px);align-items:center}
+.envelope-copy h3{font:600 clamp(42px,6vw,68px)/.94 'Dancing Script',cursive;margin:12px 0 18px}
+.envelope-copy p{font-size:14px;line-height:1.7;max-width:440px}
+.envelope-copy .warning{font-weight:700}
+.envelope-wrap{display:grid;place-items:center;min-height:340px}
+.envelope{width:min(100%,440px);aspect-ratio:1.6;border:0;background:transparent;position:relative;padding:0;filter:drop-shadow(0 18px 20px #54152d35);transform:rotate(-2deg);transition:transform .3s}
+.envelope:hover{transform:rotate(0) translateY(-4px)}
+.env-back{position:absolute;inset:0;background:linear-gradient(135deg,#ff85c2,#f42d91);border-radius:3px}
+.env-paper{position:absolute;left:7%;bottom:4%;width:86%;height:90%;background:#fffaf0;border:1px solid #f2d0bb;display:flex;flex-direction:column;align-items:center;justify-content:center;transition:transform 1s .2s;z-index:1}
+.env-paper strong{font:600 clamp(26px,4vw,42px) 'Dancing Script',cursive;color:var(--magenta)}
+.env-paper small{font:600 9px 'Space Grotesk',sans-serif;letter-spacing:.2em;margin-top:8px}
+.env-front{position:absolute;inset:0;background:linear-gradient(135deg,#ff78bd,#ed2388);clip-path:polygon(0 0,50% 56%,100% 0,100% 100%,0 100%);z-index:3}
+.env-flap{position:absolute;inset:0 0 auto;height:65%;background:linear-gradient(145deg,#ff99cb,#ff69b4);clip-path:polygon(0 0,100% 0,50% 100%);transform-origin:top;transition:transform .8s ease;z-index:4}
+.env-seal{position:absolute;left:50%;top:53%;transform:translate(-50%,-50%);width:68px;aspect-ratio:1;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle at 35% 25%,#ffe4a0,#bc6c25 62%,#784116);border:3px double #ffe3a0;color:#fff0bd;font:26px 'Playfair Display',serif;z-index:5;transition:opacity .2s,transform .3s}
+.envelope.open .env-flap{transform:rotateX(180deg);z-index:0}
+.envelope.open .env-seal{opacity:0;transform:translate(-50%,-50%) scale(.5)}
+.envelope.open .env-paper{transform:translateY(-75px)}
+.open-caption{margin-top:22px;font:600 10px 'Space Grotesk',sans-serif;letter-spacing:.18em;text-transform:uppercase;color:var(--magenta);text-align:center}
+.notice{max-width:540px;margin:20px auto 0;padding:18px;border:1px solid #edb5c9;background:#fff7e9;color:var(--ink);font-size:12px;line-height:1.65}
+.notice strong{color:var(--magenta)}
+.invite-card{display:none;max-width:980px;margin:45px auto 0;background:var(--cream);color:var(--ink);box-shadow:0 25px 70px #54152d20;animation:rise .8s both}
+.invite-card.show{display:block}
+@keyframes rise{from{opacity:0;transform:translateY(25px)}to{opacity:1;transform:translateY(0)}}
+.card-hero{display:grid;grid-template-columns:1.05fr .95fr;min-height:440px}
+.card-photo-wrap{min-height:400px;overflow:hidden;background:#e5b3a2}
+.card-photo-wrap img{width:100%;height:100%;min-height:440px;object-fit:cover;object-position:center 22%;display:block}
+.card-title{padding:clamp(24px,5vw,65px);display:flex;flex-direction:column;justify-content:center}
+.card-title .overline{font:600 10px 'Space Grotesk',sans-serif;letter-spacing:.2em;text-transform:uppercase;color:var(--magenta)}
+.card-title h2{font:600 clamp(62px,8vw,100px)/.82 'Dancing Script',cursive;letter-spacing:-.035em;margin:25px 0;color:var(--magenta)}
+.card-title h2 em{display:block;color:var(--orange);font-weight:600}
+.card-title .meta{font:600 11px/1.8 'Space Grotesk',sans-serif;letter-spacing:.12em;text-transform:uppercase}
+.card-body{padding:clamp(24px,5vw,60px);display:grid;grid-template-columns:repeat(3,1fr);gap:25px;border-top:1px solid var(--line)}
+.info h3{font:600 10px 'Space Grotesk',sans-serif;letter-spacing:.17em;text-transform:uppercase;color:var(--magenta);margin:0 0 10px}
+.info p{font-size:14px;line-height:1.6;margin:0}
+.palette{display:flex;gap:7px;margin-top:12px}.swatch{width:24px;height:24px;border-radius:50%;border:1px solid #00000010}
+.drink-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;max-width:760px;margin:26px auto}
+.drink-option{display:flex;align-items:center;gap:12px;padding:15px 14px;border:1px solid #e6b9aa;background:#fffaf2;text-align:left;min-height:58px}
+.drink-option input{accent-color:var(--magenta);width:17px;height:17px;flex:none}
+.drink-option span{font:500 14px 'DM Sans',Arial,sans-serif;letter-spacing:0;text-transform:none}
+.rsvp{padding:clamp(25px,5vw,55px);background:#fbe3e8}
+.rsvp h3{font:600 clamp(48px,7vw,76px)/.9 'Dancing Script',cursive;margin:0 0 12px;color:var(--magenta)}
+.rsvp-intro{font-size:13px;line-height:1.6;max-width:480px}
+.rsvp-form{max-width:600px;margin-top:25px}
+.rsvp-form label{display:block;font:600 10px 'Space Grotesk',sans-serif;letter-spacing:.10em;text-transform:uppercase;margin:17px 0 7px}
+.rsvp-form input[type=text],.rsvp-form select{width:100%;border:0;border-bottom:1px solid #c77e96;background:transparent;padding:13px 2px;outline:none;color:var(--ink);border-radius:0}
+.btn{display:inline-flex;align-items:center;justify-content:center;border:0;background:var(--magenta);color:white;padding:15px 22px;font:600 10px 'Space Grotesk',sans-serif;letter-spacing:.15em;text-transform:uppercase}
+.btn:hover{background:#aa1e5a}
+.btn.outline{background:transparent;color:var(--magenta);border:1px solid var(--magenta)}
+footer{padding:28px 22px;display:flex;justify-content:space-between;gap:15px;font:600 9px 'Space Grotesk',sans-serif;letter-spacing:.16em;text-transform:uppercase}
+@media(max-width:700px){
+ .topbar{padding:14px 16px;font-size:9px}.hero-title{font-size:clamp(60px,16vw,112px)}.hero-subline{font-size:9px;letter-spacing:.1em}
+ .hero-collage{height:390px}.photo-main{left:7%;width:58%;height:78%;top:9%;object-position:center 18%}.photo-small{right:4%;width:35%;height:42%;bottom:5%;border-width:5px}.flower.one{left:57%;top:5%}
+ .hero-bottom{grid-template-columns:1fr}.date-lockup{text-align:left}.envelope-area{grid-template-columns:1fr}.envelope-copy{order:1}.envelope-wrap{order:0;min-height:260px}.notice{margin-top:8px}
+ .card-hero{grid-template-columns:1fr}.card-photo-wrap{min-height:360px;max-height:520px}.card-photo-wrap img{min-height:360px;max-height:520px;object-position:center 20%}.card-title{padding:30px 24px}
+ .card-body{grid-template-columns:1fr 1fr;gap:22px}.drink-grid{grid-template-columns:1fr}footer{flex-direction:column}
+}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+@media print{
+  @page{size:A4 portrait;margin:12mm}
+  body{background:white!important;color:#321820!important}
+  .topbar,.hero,footer,.notice,.open-caption,.btn,.rsvp-form button,
+  .section-head,.envelope-area,.section.orange{display:none!important}
+  /* Keep the parent visible: the printable invitation is nested inside it. */
+  .section.dark{display:block!important;padding:0!important;margin:0!important;background:white!important;color:#321820!important}
+  .section.dark > *:not(#inviteCard){display:none!important}
+  #inviteCard,.invite-card{display:block!important;visibility:visible!important;box-shadow:none!important;border:0!important;margin:0!important;max-width:none!important;animation:none!important}
+  .card-hero{grid-template-columns: .9fr 1.1fr;min-height:0;break-inside:avoid}
+  .card-photo-wrap{min-height:0;height:115mm}
+  .card-photo-wrap img{width:100%;height:115mm;min-height:0;max-height:none;object-fit:cover}
+  .card-title{padding:12mm 9mm}
+  .card-title h2{font-size:36pt}
+  .card-body{grid-template-columns:repeat(2,1fr);gap:6mm;padding:8mm;break-inside:avoid}
+  .rsvp{padding:8mm;break-inside:avoid}
+  .drink-grid{grid-template-columns:repeat(2,1fr);gap:3mm;margin:4mm 0}
+  .drink-option{min-height:0;padding:3mm;font-size:9pt}
+  .rsvp-form input[type=text],.rsvp-form select{padding:2mm}
+  .card-photo-wrap img{print-color-adjust:exact;-webkit-print-color-adjust:exact}
+}
+
+/* L'écran d'enveloppe est le seul contenu visible avant l'ouverture. */
+body:not(.revealed) .topbar,
+body:not(.revealed) .hero,
+body:not(.revealed) .section:not(#open),
+body:not(.revealed) footer { display:none !important; }
+body:not(.revealed) #open { min-height:100vh; display:flex; flex-direction:column; justify-content:center; }
+body:not(.revealed) #open .section-head { display:none; }
+body:not(.revealed) #open .envelope-area { width:100%; }
+body:not(.revealed) #open .envelope-copy { max-width:540px; margin:0 auto; text-align:center; }
+body:not(.revealed) #open .envelope-copy .eyebrow { color:var(--butter); }
+body:not(.revealed) #open .envelope-copy h3 { font-size:clamp(32px,6vw,52px); }
+body:not(.revealed) #open .envelope-copy p { margin-left:auto; margin-right:auto; }
+body:not(.revealed) #open .notice { display:none; }
+body.revealed .topbar,
+body.revealed .hero,
+body.revealed .section,
+body.revealed footer { animation:revealPage .9s both; }
+@keyframes revealPage { from { opacity:0; transform:translateY(14px); } to { opacity:1; transform:translateY(0); } }
+
+
+
+/* Première interface : fidèle à la référence Tequila Sunset */
+.landing-screen{min-height:100svh;padding:clamp(18px,4vw,42px) clamp(14px,4vw,44px) 28px;position:relative;overflow:hidden;text-align:center;background:repeating-linear-gradient(90deg,#fff9f1 0,#fff9f1 9%,#f8e7e8 9%,#f8e7e8 18%);color:#8d234d;display:flex;flex-direction:column;align-items:center;justify-content:flex-start}
+.landing-title{position:relative;z-index:2;margin:0 auto;max-width:780px}
+.landing-kicker{font:600 10px 'Space Grotesk',sans-serif;letter-spacing:.24em;text-transform:uppercase;color:#a33c61;margin-bottom:7px}
+.landing-title h1{margin:0;font-weight:400;line-height:.77;color:#b92d61}
+.landing-title h1 span:first-child{display:block;font:italic 500 clamp(62px,12vw,128px)/.85 'Dancing Script',cursive;letter-spacing:-.045em}
+.landing-title-second{display:block;font:500 clamp(44px,8.5vw,92px)/.95 'Playfair Display',serif;letter-spacing:.04em}
+.landing-stage{width:min(100%,720px);height:clamp(300px,48vh,480px);position:relative;display:grid;place-items:center;margin:8px auto 0}
+.landing-envelope-wrap{width:min(78%,510px);position:relative;z-index:2;perspective:900px}
+.landing-screen .envelope{width:100%;aspect-ratio:1.62;transform:rotate(-1deg);filter:drop-shadow(0 16px 12px #8a31532a)}
+.landing-screen .envelope:hover{transform:rotate(0) translateY(-3px)}
+.landing-screen .env-back{background:#ff69b4;border:1px solid #e54b9c;border-radius:2px}
+.landing-screen .env-paper{background:#fff7e9;border:1px solid #e9c8a0;box-shadow:0 3px 8px #6f29401a}
+.landing-screen .env-paper strong{font:italic 500 clamp(27px,5vw,48px) 'Dancing Script',cursive;color:#fff1bd;text-shadow:0 1px 2px #a84372}
+.landing-screen .env-paper small{font:600 8px 'Space Grotesk',sans-serif;letter-spacing:.19em;color:#a33c61}
+.landing-screen .env-front{background:linear-gradient(135deg,#ff82c3,#ff69b4 65%,#f44c9f);clip-path:polygon(0 0,50% 56%,100% 0,100% 100%,0 100%)}
+.landing-screen .env-flap{background:linear-gradient(145deg,#ff9dce,#ff69b4);clip-path:polygon(0 0,100% 0,50% 100%)}
+.landing-screen .env-seal{width:clamp(52px,8vw,72px);background:radial-gradient(circle at 35% 25%,#fff0bf,#d7a44d 62%,#99631f);border:3px double #fff0bf;color:#fff6d9;box-shadow:0 2px 5px #77364a4a}
+.landing-cocktail{position:absolute;z-index:3;left:2%;bottom:1%;font-size:clamp(48px,8vw,86px);transform:rotate(-8deg);filter:drop-shadow(0 5px 4px #69324722);display:flex;align-items:center}
+.cocktail-garnish{position:absolute;top:-28px;left:35%;font-size:.43em}
+.citrus-slice{font-size:.58em;margin-left:-18px;margin-top:28px}
+.landing-citrus{position:absolute;z-index:1;font-size:clamp(42px,7vw,76px);filter:drop-shadow(0 4px 3px #69324720)}
+.citrus-left{left:13%;top:18%;transform:rotate(-18deg)}
+.citrus-right{right:10%;bottom:14%;transform:rotate(18deg)}
+.landing-flower{position:absolute;z-index:3;font-size:clamp(62px,10vw,110px);line-height:1;filter:drop-shadow(0 3px 3px #69324718)}
+.flower-left{left:5%;bottom:6%;color:#f0a2bf;transform:rotate(-15deg)}
+.flower-right{right:3%;bottom:15%;color:#e8a1ba;transform:rotate(18deg)}
+.landing-open{margin:0 auto;border:0;background:transparent;color:#a52b59;font:600 15px 'Playfair Display',serif;letter-spacing:.08em;padding:13px 18px;display:flex;gap:12px;align-items:center}
+.landing-open span{font-size:22px;transition:transform .2s}.landing-open:hover span{transform:translate(3px,-3px)}
+.landing-note{margin:2px 0 0;font:italic 13px 'Playfair Display',serif;color:#8e5266}
+body:not(.revealed) .topbar,body:not(.revealed) .hero,body:not(.revealed) .section:not(#open),body:not(.revealed) footer{display:none!important}
+body:not(.revealed) #open{display:flex;min-height:100svh}
+body:not(.revealed) #open .invite-card{display:none!important}
+body.revealed #open .landing-title,body.revealed #open .landing-stage,body.revealed #open .landing-open,body.revealed #open .landing-note{display:none}
+body.revealed #open{padding:0;background:var(--cream);min-height:0;display:block}
+body.revealed #open .invite-card{display:block}
+body.revealed .topbar,body.revealed .hero,body.revealed .section,body.revealed footer{animation:revealPage .8s both}
+@keyframes revealPage{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:600px){.landing-screen{padding-top:34px}.landing-stage{height:clamp(300px,43vh,390px);margin-top:15px}.landing-envelope-wrap{width:84%}.landing-cocktail{left:-1%;bottom:0}.citrus-left{left:4%;top:16%}.citrus-right{right:2%;bottom:13%}.flower-left{left:0;bottom:4%}.flower-right{right:-1%;bottom:13%}.landing-open{font-size:14px}}
+
+
+/* Retouche fidèle à la capture de référence : enveloppe illustrée, non rectangulaire */
+.landing-screen{background:repeating-linear-gradient(90deg,#fff8f0 0,#fff8f0 12.3%,#f7e5e8 12.3%,#f7e5e8 24.6%);padding-top:clamp(24px,5vh,48px)}
+.landing-title h1 span:first-child{font-size:clamp(64px,10.5vw,124px);line-height:.9}
+.landing-title-second{font-size:clamp(48px,7.8vw,92px);line-height:.88;letter-spacing:.025em}
+.landing-stage{height:clamp(340px,47vh,460px);width:min(100%,820px);margin-top:0}
+.landing-envelope-wrap{width:min(76%,560px);z-index:2}
+.landing-screen .envelope{aspect-ratio:1.72;transform:rotate(-1.5deg);filter:drop-shadow(0 16px 14px #87354b26)}
+.landing-screen .env-back{background:#ff69b4;border:1px solid #f34d9e;border-radius:1px}
+.landing-screen .env-paper{left:7%;bottom:4%;width:86%;height:90%;background:#fff0f5;border:1px solid #f4c7d7;z-index:1}
+.landing-screen .env-front{z-index:3;background:linear-gradient(135deg,#ff83c1 0%,#ff69b4 56%,#f3489c 100%);clip-path:polygon(0 0,50% 57%,100% 0,100% 100%,0 100%)}
+.landing-screen .env-front:after{content:"";position:absolute;inset:0;background:linear-gradient(155deg,transparent 49.5%,#e94899 50%,transparent 50.5%),linear-gradient(25deg,transparent 49.5%,#ff9bd0 50%,transparent 50.5%);opacity:.45}
+.landing-screen .env-flap{z-index:4;height:62%;background:linear-gradient(145deg,#ff9bd0 0%,#ff79bd 72%,#ff69b4 100%);clip-path:polygon(0 0,100% 0,50% 100%);filter:drop-shadow(0 2px 1px #d93685)}
+.landing-screen .env-flap:after{content:"You're invited";position:absolute;top:18%;left:0;width:100%;text-align:center;color:#fff5d8;font:italic 500 clamp(25px,4.5vw,43px) 'Dancing Script',cursive;text-shadow:0 1px 1px #b9347355}
+.landing-screen .env-paper strong{display:none}
+.landing-screen .env-paper small{font-size:8px;color:#b52e64}
+.landing-screen .env-seal{z-index:6;top:55%;width:clamp(56px,7vw,72px);background:radial-gradient(circle at 34% 25%,#fff0b9,#e4b454 58%,#b57a2d);border:3px double #fff0b9;color:#fff7d8}
+.landing-cocktail{width:clamp(92px,14vw,148px);left:5%;bottom:2%;z-index:4;transform:rotate(-7deg)}
+.landing-citrus{width:clamp(46px,7vw,74px);filter:drop-shadow(0 5px 3px #8b40501c)}
+.citrus-left{left:17%;top:50%;transform:rotate(-18deg);z-index:3}
+.citrus-right{right:8%;bottom:14%;transform:rotate(15deg);z-index:3}
+.landing-flower{width:clamp(76px,11vw,118px);height:auto;filter:drop-shadow(0 4px 3px #8b40501c)}
+.flower-left{left:2%;bottom:8%;z-index:4;transform:rotate(-14deg)}
+.flower-right{right:0%;bottom:20%;z-index:4;transform:rotate(17deg)}
+.landing-open{margin-top:-3px;font-size:16px;color:#a62a59;letter-spacing:.08em}
+.landing-note{margin-top:8px;font-size:15px;color:#a45a72}
+@media(max-width:600px){
+ .landing-screen{padding-top:35px;background:repeating-linear-gradient(90deg,#fff8f0 0,#fff8f0 12%,#f7e5e8 12%,#f7e5e8 24%)}
+ .landing-title h1 span:first-child{font-size:clamp(61px,15vw,94px)}
+ .landing-title-second{font-size:clamp(45px,11vw,68px)}
+ .landing-stage{height:clamp(300px,42vh,390px);margin-top:15px}
+ .landing-envelope-wrap{width:84%}
+ .landing-cocktail{width:95px;left:-2%;bottom:2%}
+ .citrus-left{left:8%;top:47%;width:45px}
+ .citrus-right{right:1%;bottom:17%;width:45px}
+ .flower-left{left:-2%;bottom:9%;width:74px}
+ .flower-right{right:-3%;bottom:22%;width:74px}
+ .landing-screen .env-flap:after{font-size:clamp(23px,6vw,32px)}
+ .landing-open{font-size:14px}
+ .landing-note{font-size:13px}
+}
+
+
+/* Couverture visuelle basée sur l’illustration approuvée */
+.landing-screen{min-height:100svh;padding:0;display:flex;align-items:center;justify-content:center;background:repeating-linear-gradient(90deg,#fffdf7 0,#fffdf7 42px,#f6dfe5 42px,#f6dfe5 84px);overflow:hidden}
+.cover-art-wrap{width:min(94%,1450px);max-width:1450px;position:relative;line-height:0;transition:transform .35s ease;filter:drop-shadow(0 12px 20px #8b3b5b12)}
+
+/* Identification claire de l'événement dès la première seconde */
+.cover-event-top,.cover-event-bottom{position:absolute;z-index:12;left:50%;transform:translateX(-50%);width:max-content;max-width:92%;text-align:center;line-height:1.2;pointer-events:none;text-transform:uppercase}
+.cover-event-top{top:1.5%;padding:10px 22px 9px;background:#d72d78;color:#fff7e9;border:1px solid #ffe58a;box-shadow:0 5px 18px #6d183b30;font:700 clamp(11px,1.5vw,17px) 'Space Grotesk',sans-serif;letter-spacing:.2em;border-radius:3px}
+.cover-event-top strong{display:block;font:700 clamp(22px,3.4vw,39px)/1.05 'Playfair Display',serif;letter-spacing:.035em;color:#ffe58a;margin-top:4px}
+.cover-event-bottom{bottom:1.4%;padding:10px 18px;background:#fff7e9ef;color:#8e214c;border:1px solid #d72d78;font:700 clamp(10px,1.3vw,14px) 'Space Grotesk',sans-serif;letter-spacing:.16em;box-shadow:0 5px 18px #6d183b20}
+.cover-event-bottom span{color:#d72d78}
+.card-birthday-badge{display:inline-flex;align-self:flex-start;align-items:center;gap:9px;margin:18px 0 0;padding:9px 13px;background:#d72d78;color:#fff7e9;border:1px solid #ffe58a;font:700 11px 'Space Grotesk',sans-serif;letter-spacing:.12em;text-transform:uppercase}
+.card-birthday-badge strong{font:700 25px/1 'Playfair Display',serif;color:#ffe58a}
+.card-title .meta{margin-top:18px;padding-top:15px;border-top:1px solid #e7bda9}
+.card-title .meta .birthday-line{display:block;font-size:14px;letter-spacing:.08em;color:#d72d78;margin-bottom:6px}
+.card-title .meta .time-line{display:block;color:#ff7438;margin-top:4px}
+
+.cover-art{display:block;width:100%;height:auto;max-height:94svh;object-fit:contain;margin:0 auto;transition:transform .45s cubic-bezier(.2,.8,.2,1),filter .45s ease;transform-origin:50% 58%}
+.cover-hotspot{position:absolute;display:block;border:0;background:transparent;cursor:pointer;padding:0;line-height:normal}
+.cover-envelope-hotspot{left:27%;top:34%;width:49%;height:46%;border-radius:8px;z-index:10;cursor:pointer;background:transparent;touch-action:manipulation}
+.cover-art-wrap:has(.cover-envelope-hotspot:hover){transform:translateY(-3px)}
+.cover-art-wrap:has(.cover-envelope-hotspot:hover) .cover-art{transform:scale(1.012) rotate(-.25deg);filter:saturate(1.04)}
+.cover-envelope-hotspot:hover{box-shadow:inset 0 0 0 2px #fff2c933;cursor:pointer}
+.cover-envelope-hotspot:active{transform:scale(.985)}
+.cover-hotspot:focus-visible{outline:3px solid #b92d61;outline-offset:3px}
+body:not(.revealed) .topbar,body:not(.revealed) .hero,body:not(.revealed) .section:not(#open),body:not(.revealed) footer{display:none!important}
+body:not(.revealed) #open{display:flex;min-height:100svh}
+body:not(.revealed) #open .invite-card{display:none!important}
+body.revealed #open .cover-art-wrap{display:none}
+body.revealed #open{padding:0;background:var(--cream);min-height:0;display:block}
+body.revealed #open .invite-card{display:block}
+body.revealed .topbar,body.revealed .hero,body.revealed .section,body.revealed footer{animation:revealPage .8s both}
+@keyframes revealPage{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:700px){.landing-screen{background:repeating-linear-gradient(90deg,#fffdf7 0,#fffdf7 24px,#f6dfe5 24px,#f6dfe5 48px)}.cover-art-wrap{width:100%;height:100svh;display:flex;align-items:center;justify-content:center}.cover-art{width:100%;height:auto;max-width:none;max-height:96svh;object-fit:contain}.cover-envelope-hotspot{left:23%;top:34%;width:55%;height:46%}.cover-event-top{top:2.5%;padding:8px 12px;letter-spacing:.12em;font-size:10px}.cover-event-top strong{font-size:clamp(20px,5vw,28px)}.cover-event-bottom{bottom:2.5%;padding:8px 10px;font-size:10px;letter-spacing:.07em;max-width:95%}.card-birthday-badge{margin-top:14px}.card-title .meta{font-size:10px}}
+
+
+/* Animation d’ouverture : le sceau réagit, la couverture se déploie puis révèle la carte */
+.cover-art-wrap{isolation:isolate;perspective:1200px}
+.cover-art{position:relative;z-index:1;transform-origin:50% 58%;transition:transform .85s cubic-bezier(.2,.75,.2,1),opacity .75s ease,filter .75s ease}
+.opening-flap{position:absolute;z-index:4;left:28%;top:35%;width:47%;height:30%;pointer-events:none;opacity:0;transform-origin:50% 0;transform:rotateX(-90deg);background:linear-gradient(155deg,#ff9bd0,#ff69b4 60%,#e93c91);clip-path:polygon(0 0,100% 0,50% 100%);filter:drop-shadow(0 12px 12px #65234244)}
+.seal-flash{position:absolute;z-index:8;left:52.25%;top:61.5%;width:0;height:0;border-radius:50%;pointer-events:none;opacity:0;background:radial-gradient(circle,#fff7cf 0%,#e7b858 35%,#ff69b4 65%,transparent 72%);transform:translate(-50%,-50%)}
+.cover-art-wrap.opening .seal-flash{animation:sealGlow .65s ease-out forwards}
+.cover-art-wrap.opening .opening-flap{animation:flapLift .8s .18s ease-in forwards}
+.cover-art-wrap.opening .cover-art{animation:coverLift .95s .38s cubic-bezier(.2,.75,.2,1) forwards}
+.cover-art-wrap.opening .cover-envelope-hotspot{pointer-events:none}
+.cover-envelope-hotspot{transition:box-shadow .2s,transform .2s}
+@keyframes sealGlow{0%{width:0;height:0;opacity:0}30%{width:11%;height:11%;opacity:1}100%{width:24%;height:24%;opacity:0}}
+@keyframes flapLift{0%{opacity:0;transform:rotateX(-90deg)}20%{opacity:1}100%{opacity:1;transform:rotateX(0deg) translateY(-9%)}}
+@keyframes coverLift{0%{opacity:1;transform:scale(1);filter:brightness(1)}45%{opacity:1;transform:scale(1.025);filter:brightness(1.06)}100%{opacity:0;transform:scale(1.07) translateY(-2%);filter:brightness(1.1)}}
+body.revealed #open .invite-card{animation:cardReveal .85s .05s both}
+@keyframes cardReveal{from{opacity:0;transform:translateY(24px) scale(.985)}to{opacity:1;transform:translateY(0) scale(1)}}
+@media(max-width:700px){.opening-flap{left:25%;top:36%;width:50%;height:30%}.seal-flash{left:52.25%;top:61.5%}}
+</style>
+
+<style id="progressive-envelope-preserving-design">
+/* Correctif ciblé : on conserve le design validé et toutes les sections existantes. */
+body:not(.revealed) #open{position:relative;isolation:isolate}
+body:not(.revealed) #open .cover-art-wrap{position:relative;overflow:visible}
+/* La carte démarre petite, dans l'ouverture de l'enveloppe, puis monte et grandit. */
+#open .invite-card.physical-emerging{
+ display:block!important;position:absolute!important;z-index:6!important;
+ left:50%!important;top:38%!important;width:min(72%,760px)!important;max-width:none!important;
+ margin:0!important;transform:translate(-50%,0) scale(.24)!important;transform-origin:50% 0!important;
+ opacity:0;pointer-events:none;box-shadow:0 16px 40px #54152d30;
+ animation:cardPhysicallyRise 3.05s cubic-bezier(.2,.72,.2,1) forwards!important;
+}
+@keyframes cardPhysicallyRise{
+ 0%{opacity:0;transform:translate(-50%,22px) scale(.22)}
+ 10%{opacity:1}
+ 38%{opacity:1;transform:translate(-50%,-95px) scale(.48)}
+ 68%{opacity:1;transform:translate(-50%,-205px) scale(.76)}
+ 100%{opacity:1;transform:translate(-50%,-285px) scale(.92)}
+}
+/* Calque de devant : il masque le bas de la carte comme le devant d'une vraie enveloppe. */
+#open .physical-envelope-front{position:absolute;z-index:8;left:28.2%;top:36.4%;width:46.3%;height:42.2%;pointer-events:none;
+ background:linear-gradient(135deg,#ff82c3 0%,#ff69b4 56%,#f3489c 100%);
+ clip-path:polygon(0 0,50% 53%,100% 0,100% 100%,0 100%);filter:drop-shadow(0 2px 2px #9b245b24)}
+#open .physical-envelope-front:after{content:"";position:absolute;inset:0;background:linear-gradient(155deg,transparent 49.5%,#e94899 50%,transparent 50.5%),linear-gradient(25deg,transparent 49.5%,#ff9bd0 50%,transparent 50.5%);opacity:.4}
+#open .physical-envelope-flap{position:absolute;z-index:9;left:28.2%;top:36.4%;width:46.3%;height:23%;pointer-events:none;
+ background:linear-gradient(145deg,#ff9bd0 0%,#ff79bd 72%,#ff69b4 100%);clip-path:polygon(0 0,100% 0,50% 100%);
+ transform-origin:50% 0;filter:drop-shadow(0 2px 2px #d9368550);transition:transform .85s ease}
+#open .physical-envelope-flap:after{content:"You're invited";position:absolute;top:18%;left:0;width:100%;text-align:center;color:#fff5d8;font:italic 500 clamp(16px,2.6vw,30px) 'Dancing Script',cursive;text-shadow:0 1px 1px #b9347355}
+#open .physical-envelope-flap.is-open{transform:rotateX(180deg);opacity:.2}
+#open .physical-seal{position:absolute;z-index:11;left:51.35%;top:61.5%;width:clamp(40px,5vw,70px);aspect-ratio:1;border-radius:50%;display:grid;place-items:center;
+ color:#fff6d9;font:clamp(18px,2vw,26px) 'Playfair Display',serif;background:radial-gradient(circle at 34% 25%,#fff0b9,#e4b454 58%,#b57a2d);border:3px double #fff0b9;box-shadow:0 2px 5px #77364a4a;pointer-events:none;transition:opacity .25s,transform .25s}
+#open .physical-seal.is-gone{opacity:0;transform:scale(.45)}
+/* Fin du mouvement : la carte rejoint le flux de la page, sans masquer le contenu ni supprimer la couverture. */
+#open .invite-card.physical-settled{position:relative!important;left:auto!important;top:auto!important;width:min(100%,1020px)!important;max-width:1020px!important;margin:34px auto 0!important;transform:none!important;opacity:1!important;pointer-events:auto;animation:cardSettle .5s ease-out both!important}
+@keyframes cardSettle{from{opacity:.7;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+body.revealed #open{padding:clamp(18px,4vw,52px);background:linear-gradient(145deg,#f7a6c2,#f9c4a0 45%,#ffdb83);min-height:0;display:block}
+body.revealed #open .cover-art-wrap{display:block!important}
+body.revealed #open .invite-card{display:block!important}
+body.revealed #open .landing-title,body.revealed #open .landing-stage,body.revealed #open .landing-open,body.revealed #open .landing-note{display:none}
+@media(max-width:700px){
+ #open .physical-envelope-front{left:23%;top:36%;width:55%;height:42%}
+ #open .physical-envelope-flap{left:23%;top:36%;width:55%;height:23%}
+ #open .physical-seal{left:50.5%;top:61.5%;width:clamp(38px,10vw,58px)}
+ #open .invite-card.physical-emerging{width:84%!important;top:38%!important}
+ @keyframes cardPhysicallyRise{0%{opacity:0;transform:translate(-50%,18px) scale(.22)}12%{opacity:1}48%{opacity:1;transform:translate(-50%,-80px) scale(.42)}78%{opacity:1;transform:translate(-50%,-150px) scale(.62)}100%{opacity:1;transform:translate(-50%,-175px) scale(.72)}}
+}
+@media(prefers-reduced-motion:reduce){#open .invite-card.physical-emerging{animation-duration:.01ms!important}}
+/* Finition typographique ciblée des informations de la soirée */
+.info p{
+  font-family:'Dancing Script',cursive!important;
+  font-size:clamp(24px,2.3vw,31px)!important;
+  font-weight:600!important;
+  line-height:1.25!important;
+  letter-spacing:0!important;
+  color:#321820!important;
+}
+@media(max-width:700px){.info p{font-size:27px!important;line-height:1.25!important}}
+</style>
+
+
+<style id="ricia-final-art-direction">
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Dancing+Script:wght@400;500;600;700&family=Pacifico&family=Patrick+Hand&display=swap');
+:root{--pink:#f6a7d0;--magenta:#c92f72;--orange:#f58235;--coral:#fa6334;--butter:#fff08a;--cream:#fffaf5;--ink:#51243a;--line:#e9b5cd}
+body,button,input,select,textarea,.topbar,.hero-label,.hero-subline,.eyebrow,.date-lockup,.section-head p,.info h3,.info p,.rsvp-form label,.rsvp-form input,.rsvp-form select,.drink-option span,.btn,footer,.cover-event-bottom,.card-title .meta,.card-title .overline,.rsvp-intro{font-family:'Patrick Hand','Caveat',cursive!important;letter-spacing:normal!important;text-transform:none!important}
+.hero-title,.section-head h2,.envelope-copy h3,.card-title h2,.rsvp h3{font-family:'Dancing Script','Caveat',cursive!important}
+.landing-screen{min-height:100svh;padding:18px 14px 28px;display:flex;align-items:center;justify-content:center;background:repeating-linear-gradient(90deg,#fffaf5 0,#fffaf5 25px,#f8e4ec 25px,#f8e4ec 50px);overflow:hidden}
+body:not(.revealed) #open{display:flex;min-height:100svh}
+.landing-composition{width:min(100%,680px);height:min(92svh,900px);min-height:590px;position:relative;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;isolation:isolate;overflow:visible;filter:none!important}
+.landing-brand{margin-top:2%;font:700 clamp(56px,11vw,105px)/.8 'Dancing Script',cursive;color:var(--magenta);text-align:center;letter-spacing:-.04em;z-index:2}
+.landing-brand span{display:block;font-size:.88em;color:var(--coral);margin-left:22%}
+.landing-subtitle{margin:20px 0 0;color:#9b315b;font:500 clamp(18px,3.7vw,25px) 'Caveat',cursive;text-align:center;z-index:2}
+.cover-art{display:none!important}
+.landing-composition .cover-envelope-hotspot{position:absolute;left:50%;top:34%;transform:translateX(-50%) rotate(-2deg);width:min(70%,430px);height:auto;aspect-ratio:1.58;z-index:5;border:0;border-radius:5px;background:transparent;filter:drop-shadow(0 18px 20px #8f2a5530);overflow:visible;touch-action:manipulation}
+.landing-composition .env-back{position:absolute;inset:0;border-radius:5px;background:linear-gradient(145deg,#ffb7d9,#f477b5 58%,#df3e8c);z-index:1}
+.landing-composition .env-paper{position:absolute;left:7%;bottom:4%;width:86%;height:92%;z-index:2;background:#fffaf5;border:1px solid #f2c4d7;display:flex;flex-direction:column;justify-content:flex-start;padding-top:12%;align-items:center;transform:translateY(16%);transition:transform 1.05s cubic-bezier(.2,.75,.2,1);box-shadow:0 4px 12px #9e28521c}
+.landing-composition .env-paper strong{font:600 clamp(28px,6vw,48px) 'Dancing Script',cursive;color:var(--magenta)}
+.landing-composition .env-paper small{font:500 clamp(16px,3vw,22px) 'Caveat',cursive;color:#9a385d;margin-top:8px}
+.landing-composition .env-front{position:absolute;inset:0;z-index:4;background:linear-gradient(140deg,#ff9bca,#f45aa5 60%,#e43d8e);clip-path:polygon(0 0,50% 54%,100% 0,100% 100%,0 100%)}
+.landing-composition .env-flap{position:absolute;inset:0 0 auto;height:64%;z-index:6;background:linear-gradient(145deg,#ffc3e0,#ff8fc6 70%,#f66aaf);clip-path:polygon(0 0,100% 0,50% 100%);transform-origin:50% 0;transition:transform .9s ease;backface-visibility:visible}
+.landing-composition .env-seal{position:absolute;left:50%;top:54%;transform:translate(-50%,-50%);width:clamp(68px,12.5vw,94px);height:auto;aspect-ratio:1;z-index:8;display:block;object-fit:contain;filter:drop-shadow(0 6px 5px rgba(91,43,18,.38)) drop-shadow(0 1px 1px rgba(255,241,176,.7));transition:opacity .3s,transform .3s;pointer-events:none}
+.landing-composition .cover-envelope-hotspot:hover{transform:translateX(-50%) rotate(0) translateY(-4px)}
+.landing-composition .cover-envelope-hotspot:active{transform:translateX(-50%) scale(.985)}
+.landing-composition.opening .env-flap{transform:rotateX(180deg);z-index:1}
+.landing-composition.opening .env-seal{opacity:0;transform:translate(-50%,-50%) scale(.5)}
+.landing-composition.opening .env-paper{transform:translateY(-45%);z-index:3}
+.landing-composition.opening .cover-envelope-hotspot{pointer-events:none}
+.landing-composition .cover-event-bottom{position:absolute;bottom:4%;left:50%;transform:translateX(-50%);font:600 clamp(22px,4vw,30px) 'Caveat',cursive;color:var(--magenta);letter-spacing:0!important;text-transform:none;background:#fffaf5d9;border:1px solid #f2b5d1;border-radius:40px;padding:9px 22px;white-space:nowrap;z-index:3}
+.decor{position:absolute;z-index:3;pointer-events:none;line-height:1;object-fit:contain}
+.decor-flower{width:clamp(82px,15vw,142px);height:auto;filter:drop-shadow(0 4px 4px #9c275522)}
+.flower-a{left:0%;top:39%;transform:rotate(-14deg)}.flower-b{right:-1%;top:48%;transform:rotate(17deg)}
+.decor-citrus{width:clamp(98px,18vw,164px);height:auto;filter:drop-shadow(0 4px 5px rgba(167,75,37,.12));object-fit:contain}
+.citrus-a{left:3%;top:61%;transform:rotate(-8deg)}.citrus-b{right:4%;top:25%;transform:rotate(12deg)}
+.decor-cocktail{width:clamp(82px,14vw,128px);height:auto;left:5%;bottom:9%;transform:rotate(-5deg);object-fit:contain;filter:drop-shadow(0 7px 8px rgba(105,50,39,.18))}
+.decor-disco{right:5%;bottom:15%;font:700 clamp(70px,13vw,112px) 'Caveat',cursive;color:#c5a7bb;text-shadow:2px 2px #fff,4px 4px #9c7d92}
+body.revealed #open{padding:clamp(14px,4vw,45px);background:linear-gradient(145deg,#f6a7d0,#f9c4a0 45%,#fff08a);min-height:0;display:block}
+body.revealed #open .cover-art-wrap{display:none!important}
+body.revealed #open .invite-card{display:block!important}
+.info h3{font-size:clamp(22px,3vw,28px)!important;font-weight:700!important;letter-spacing:0!important;text-transform:none!important}
+.info p{font-family:'Patrick Hand','Caveat',cursive!important;font-size:clamp(21px,2.5vw,28px)!important;line-height:1.3!important}
+.rsvp-form label{font-size:clamp(20px,2.5vw,25px)!important;font-weight:600!important;letter-spacing:0!important;text-transform:none!important}
+.rsvp-form input[type=text],.rsvp-form select{font-family:'Caveat',cursive!important;font-size:23px!important}
+.drink-option span{font-size:22px!important}
+.btn{font-size:22px!important;font-weight:600!important;letter-spacing:0!important;text-transform:none!important}
+@media(max-width:600px){.landing-screen{padding:10px 10px 18px}.landing-composition{height:92svh;min-height:560px}.landing-brand{margin-top:7%;font-size:clamp(58px,14vw,86px)}.landing-subtitle{margin-top:18px;font-size:22px}.landing-composition .cover-envelope-hotspot{top:35%;width:76%}.flower-a{left:-3%;top:42%}.flower-b{right:-4%;top:50%}.citrus-a{left:-3%;top:61%;width:clamp(78px,24vw,112px)}.citrus-b{right:-4%;top:29%;width:clamp(78px,24vw,112px)}.decor-cocktail{left:0;bottom:12%;width:clamp(70px,22vw,100px)}.decor-disco{right:0;bottom:15%}.landing-composition .cover-event-bottom{bottom:5%;font-size:24px}.card-hero{grid-template-columns:1fr}.card-photo-wrap{min-height:300px}.card-photo-wrap img{min-height:300px}.card-body{grid-template-columns:1fr 1fr}.drink-grid{grid-template-columns:1fr}.topbar{font-size:17px}}
+@media(prefers-reduced-motion:reduce){.landing-composition *{transition-duration:.01ms!important;animation-duration:.01ms!important}}
+</style>
+
+<style id="ricia-visual-refinements">
+/* Décorations : les visuels fournis par Ricia sont conservés ; les damiers de prévisualisation sont transparents. */
+#open .decor { pointer-events:none; user-select:none; }
+#open .decor-flower { object-fit:contain; filter:drop-shadow(0 5px 5px #9c275522); }
+#open .flower-a { left:1.5%; top:43%; width:clamp(88px,14vw,132px); transform:rotate(-13deg); }
+#open .flower-b { right:1.5%; top:49%; width:clamp(82px,13vw,124px); transform:rotate(13deg) scaleX(-1); }
+#open .decor-citrus { object-fit:contain; filter:drop-shadow(0 5px 4px #a74b2518); }
+#open .citrus-a { left:3%; top:62%; width:clamp(94px,15vw,136px); transform:rotate(-8deg); }
+#open .citrus-b { right:4%; top:26%; width:clamp(88px,14vw,126px); transform:rotate(10deg); }
+#open .decor-cocktail { left:5%; bottom:8%; width:clamp(72px,11vw,104px); height:auto; object-fit:contain; transform:rotate(-5deg); filter:drop-shadow(0 5px 4px #69324722); }
+/* Une vraie boule disco stylisée, plutôt qu'une étoile plate. */
+#open .decor-disco { right:5%; bottom:14%; width:clamp(48px,8vw,70px); aspect-ratio:1; border-radius:50%; overflow:hidden; background:radial-gradient(circle at 30% 24%,#fff 0 3%,#e9dce9 9%,#9c839e 26%,#f9edf6 39%,#9b819e 57%,#f7eaf3 72%,#8c718e 100%); box-shadow:0 5px 9px #6b405c33; }
+#open .decor-disco:before { content:""; position:absolute; inset:0; border-radius:50%; background:repeating-linear-gradient(0deg,transparent 0 8px,#fff9 8px 10px,transparent 10px 16px),repeating-linear-gradient(90deg,transparent 0 8px,#fff9 8px 10px,transparent 10px 16px); }
+#open .decor-disco:after { content:""; position:absolute; inset:0; border-radius:50%; background:linear-gradient(115deg,transparent 20%,#fff9 34%,transparent 45%,#fff6 61%,transparent 73%); }
+/* Le carton sort d'abord de l'enveloppe ; une courte pause permet de lire son nom avant la transition vers le site. */
+#open .invite-card.physical-emerging { animation-duration:2.65s!important; }
+#open .invite-card.physical-settled { transition:opacity .45s ease,transform .45s ease; }
+#open .cover-event-bottom { z-index:4; }
+@media(max-width:600px){
+ #open .flower-a { left:-1%; top:43%; width:clamp(76px,21vw,102px); }
+ #open .flower-b { right:-1%; top:50%; width:clamp(72px,20vw,98px); }
+ #open .citrus-a { left:-2%; top:63%; width:clamp(76px,22vw,102px); }
+ #open .citrus-b { right:-2%; top:29%; width:clamp(76px,22vw,102px); }
+ #open .decor-cocktail { left:0; bottom:9%; width:clamp(68px,19vw,92px); }
+ #open .decor-disco { right:1%; bottom:13%; width:clamp(42px,12vw,58px); }
+}
+@media(prefers-reduced-motion:reduce){#open .invite-card.physical-emerging{animation-duration:.01ms!important}}
+</style>
+
+<style id="composition-correction-2026-10-25">
+/* Correction de composition : conserver la taille de l’enveloppe, dégager la date et intégrer les images sans tuiles rectangulaires. */
+#open .landing-subtitle{position:relative;z-index:6;max-width:94%;line-height:1.12;text-wrap:balance;margin-top:clamp(16px,3vh,24px)}
+#open .landing-brand{position:relative;z-index:6}
+#open .decor-citrus{clip-path:none!important;z-index:1;filter:drop-shadow(0 6px 7px rgba(167,75,37,.15));}
+#open .citrus-a{left:0.5%;top:58%;width:clamp(82px,13vw,118px);transform:rotate(-8deg);}
+#open .citrus-b{right:0.5%;top:40%;width:clamp(82px,13vw,118px);transform:rotate(10deg);}
+#open .decor-flower{z-index:3}
+#open .flower-a{left:0.5%;top:43%;width:clamp(82px,13vw,126px);transform:rotate(-13deg)}
+#open .flower-b{right:0.5%;top:49%;width:clamp(78px,12vw,118px);transform:rotate(13deg) scaleX(-1)}
+#open .decor-cocktail{z-index:3;left:3%;bottom:8%;width:clamp(70px,10vw,100px);transform:rotate(-5deg)}
+#open .decor-disco{z-index:3;right:4%;bottom:13%;}
+#open .landing-composition .cover-envelope-hotspot{z-index:5}
+#open .landing-composition .cover-event-bottom{z-index:6}
+@media(max-width:700px){
+ #open .landing-subtitle{max-width:96%;font-size:clamp(19px,4.8vw,23px);margin-top:16px}
+ #open .citrus-a{left:-3%;top:59%;width:clamp(72px,21vw,98px)}
+ #open .citrus-b{right:-3%;top:41%;width:clamp(72px,21vw,98px)}
+ #open .flower-a{left:-2%;top:44%;width:clamp(72px,20vw,96px)}
+ #open .flower-b{right:-2%;top:50%;width:clamp(70px,19vw,92px)}
+ #open .decor-cocktail{left:0;bottom:9%;width:clamp(64px,18vw,88px)}
+ #open .decor-disco{right:0;bottom:13%;width:clamp(42px,11vw,56px)}
+}
+</style>
+
+<style id="ricia-homogeneous-blending">
+/* Harmonisation des décorations : pas de cadres visibles, bords adoucis et ombres cohérentes. */
+#open .decor-flower {
+  filter: drop-shadow(0 7px 8px rgba(131, 48, 83, .16));
+  opacity: .98;
+}
+#open .flower-a { left: 0%; top: 42%; width: clamp(104px, 16vw, 148px); transform: rotate(-12deg); }
+#open .flower-b { right: 0%; top: 47%; width: clamp(100px, 15vw, 140px); transform: rotate(12deg) scaleX(-1); }
+#open .decor-citrus {
+  object-fit: contain; opacity: .96;
+  filter: drop-shadow(0 8px 10px rgba(177, 89, 50, .10));
+  -webkit-mask-image: radial-gradient(ellipse 69% 68% at 50% 50%, #000 58%, rgba(0,0,0,.92) 70%, rgba(0,0,0,.48) 86%, transparent 100%);
+  mask-image: radial-gradient(ellipse 69% 68% at 50% 50%, #000 58%, rgba(0,0,0,.92) 70%, rgba(0,0,0,.48) 86%, transparent 100%);
+}
+#open .citrus-a { left: 1%; top: 60%; width: clamp(118px, 18vw, 168px); transform: rotate(-7deg); }
+#open .citrus-b { right: 1%; top: 27%; width: clamp(112px, 17vw, 158px); transform: rotate(8deg); }
+#open .decor-cocktail {
+  left: 5%; bottom: 7%; width: clamp(82px, 12vw, 112px);
+  opacity: .98; transform: rotate(-4deg);
+  filter: drop-shadow(0 8px 9px rgba(116, 50, 39, .15));
+  -webkit-mask-image: radial-gradient(ellipse 75% 76% at 50% 48%, #000 66%, rgba(0,0,0,.8) 82%, transparent 100%);
+  mask-image: radial-gradient(ellipse 75% 76% at 50% 48%, #000 66%, rgba(0,0,0,.8) 82%, transparent 100%);
+}
+#open .decor-disco { right: 4%; bottom: 13%; width: clamp(58px, 8vw, 74px); box-shadow: 0 7px 12px rgba(105, 64, 92, .20); }
+@media(max-width:600px) {
+  #open .flower-a { left: -2%; top: 42%; width: clamp(82px, 24vw, 112px); }
+  #open .flower-b { right: -2%; top: 48%; width: clamp(80px, 23vw, 108px); }
+  #open .citrus-a { left: -5%; top: 61%; width: clamp(92px, 29vw, 128px); }
+  #open .citrus-b { right: -5%; top: 29%; width: clamp(90px, 28vw, 124px); }
+  #open .decor-cocktail { left: 1%; bottom: 8%; width: clamp(68px, 22vw, 94px); }
+  #open .decor-disco { right: 0%; bottom: 12%; width: clamp(44px, 13vw, 58px); }
+}
+</style>
+
+
+<style id="interactive-cover-v13">
+#tsCover{position:relative;min-height:100svh;min-height:100dvh;display:grid;place-items:center;padding:16px;background:#f9d7d7;overflow:hidden;isolation:isolate}
+#tsCover:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(72,14,42,.04),rgba(72,14,42,.15));z-index:-1}
+.ts-cover-art{width:min(100%,1050px);height:min(88svh,820px);height:min(88dvh,820px);min-height:570px;position:relative;background:#f7c8d0 url("assets/tequila-sunset-cover.png") center center/contain no-repeat;border-radius:16px;box-shadow:0 24px 70px rgba(75,16,47,.2);overflow:hidden}
+.ts-cover-actions{position:absolute;left:50%;bottom:7.8%;transform:translateX(-50%);display:flex;gap:12px;width:min(82%,520px);justify-content:center}
+.ts-cover-btn{min-height:48px;flex:1;border:1px solid #b72565;border-radius:999px;background:#fff7e9;color:#b72565;font:700 11px 'Space Grotesk',Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase;padding:13px 16px;box-shadow:0 5px 18px #54152d20}
+.ts-cover-btn.primary{background:#d72d78;color:#fff7e9;border-color:#d72d78}
+.ts-cover-btn:focus-visible{outline:3px solid #ff7438;outline-offset:3px}
+body.ts-cover-active{overflow:hidden}
+body.ts-cover-active .topbar,body.ts-cover-active .hero{display:none}
+@media(max-width:600px){
+ #tsCover{padding:8px}
+ .ts-cover-art{width:100%;height:calc(100svh - 16px);height:calc(100dvh - 16px);min-height:560px;background-size:cover;background-position:center}
+ .ts-cover-actions{bottom:5.5%;width:88%;gap:8px}
+ .ts-cover-btn{font-size:10px;letter-spacing:.07em;padding:13px 10px;min-height:50px}
+}
+@media(max-height:680px) and (max-width:600px){
+ .ts-cover-art{min-height:0;height:calc(100dvh - 16px);background-size:cover}
+ .ts-cover-actions{bottom:3%}
+}
+@media(prefers-reduced-motion:reduce){.ts-cover-btn{transition:none}}
+</style>
+
+
+<style id="v19-seal-only-interaction">
+/* L’affiche reste intacte : aucune capsule de texte n’est superposée sous l’enveloppe.
+   La zone interactive discrète est positionnée directement sur le sceau doré. */
+.ts-cover-art{transition:transform .35s ease,filter .35s ease;transform-origin:52% 52%}
+#tsSealHotspot{
+  position:absolute;left:52%;top:52%;
+  transform:translate(-50%,-50%);
+  width:clamp(66px,8.5%,92px);aspect-ratio:1;
+  border:0;border-radius:50%;background:transparent;
+  z-index:10;cursor:pointer;touch-action:manipulation;
+  -webkit-tap-highlight-color:transparent;
+  transition:filter .22s ease,box-shadow .22s ease,transform .22s ease;
+}
+#tsSealHotspot:hover,#tsSealHotspot:focus-visible{
+  filter:brightness(1.08);
+  box-shadow:0 0 0 5px #ffe8a855,0 0 20px #ffd77d99;
+}
+#tsSealHotspot:active{transform:translate(-50%,-50%) scale(.92)}
+#tsSealHotspot:focus-visible{outline:2px solid #fff0ad;outline-offset:4px}
+@media(max-width:700px){
+  #tsSealHotspot{left:52%;top:63%;width:13%;min-width:60px;max-width:82px}
+}
+@media(prefers-reduced-motion:reduce){.ts-cover-art,#tsSealHotspot{transition:none!important}}
+</style>
+
+</head>
+<body class="ts-cover-active">
+
+<section id="tsCover" aria-label="Affiche d'accueil Tequila Sunset">
+  <div class="ts-cover-art" aria-label="Affiche Tequila Sunset avec enveloppe rose, cocktail, agrumes et fleurs tropicales">
+    <button type="button" id="tsSealHotspot" aria-label="Toucher le sceau doré pour ouvrir l’invitation" title="Cliquez sur le sceau doré pour ouvrir l’invitation"></button>
+    <span class="ts-opening-glow" aria-hidden="true"></span>
+  </div>
+</section>
+
+<header class="topbar"><span class="mark">TS / RICIA</span><span>THE BIRTHDAY EDITION</span><span class="date">21 NOV. 2026</span></header>
+<section class="hero">
+ <div class="hero-label">An invitation to celebrate</div>
+ <h1 class="hero-title">Tequila <span class="second">Sunset</span></h1>
+ <div class="hero-subline"><span>Ricia's 22nd birthday</span><span class="pill">Saturday · 21.11.2026</span></div>
+ <div class="hero-collage">
+  <div class="sunburst">A night<br>to remember</div>
+  <img class="photo-main" src="assets/ricia-03.jpg" alt="Portrait de Ricia">
+  <img class="photo-small" src="assets/ricia-01.jpg" alt="Ricia célébrant">
+  <div class="sticker">22<br>Years of<br>Ricia</div>
+  <div class="flower one" aria-hidden="true">✿</div><div class="flower two" aria-hidden="true">✺</div>
+ </div>
+ <div class="hero-bottom"><p>Une soirée aux couleurs du coucher de soleil, des cocktails et des souvenirs à créer ensemble.</p><div class="date-lockup">SAMEDI 21 NOVEMBRE<br>À PARTIR DE 19 H</div></div>
+</section>
+<section class="landing-screen" id="open">
+ <div class="cover-art-wrap landing-composition">
+  <div class="landing-brand">Tequila <span>Sunset</span></div>
+  <p class="landing-subtitle">Ricia’s 22nd Birthday · 21 novembre 2026 · 19 h</p>
+  <img class="decor decor-flower flower-a" src="assets/hibiscus-user-blended.png" alt="" aria-hidden="true">
+  <img class="decor decor-citrus citrus-a" src="assets/citrus-user-transparent.png" alt="" aria-hidden="true">
+  <img class="decor decor-cocktail" src="assets/cocktail-user-blended.png" alt="" aria-hidden="true">
+  <img class="decor decor-flower flower-b" src="assets/hibiscus-user-blended.png" alt="" aria-hidden="true">
+  <span class="decor decor-disco" aria-hidden="true"><i></i></span>
+  <img class="decor decor-citrus citrus-b" src="assets/citrus-user-transparent.png" alt="" aria-hidden="true">
+  <button class="cover-hotspot cover-envelope-hotspot" id="envelope" type="button" aria-label="Cliquer sur l’enveloppe pour ouvrir l’invitation" aria-expanded="false" title="Tap to open">
+   <span class="env-paper"><strong>You're invited</strong><small>RICIA · 22</small></span>
+   <span class="env-back"></span><span class="env-front"></span><span class="env-flap"></span><img class="env-seal" src="assets/sun-seal-realistic.png" alt="" aria-hidden="true">
+  </button>
+  <div class="cover-event-bottom">♡ Tap to open ♡</div>
+ </div>
+ <article class="invite-card" id="inviteCard">
+  <div class="card-hero">
+   <div class="card-photo-wrap"><img src="assets/ricia-03.jpg" alt="Ricia, portrait principal"></div>
+   <div class="card-title"><div class="overline">The birthday celebration</div><h2>Tequila <em>Sunset</em></h2><div class="card-birthday-badge"><strong>22</strong><span>ANS DE RICIA</span></div><div class="meta"><span class="birthday-line">Ricia’s 22nd Birthday</span>Samedi 21 novembre 2026<span class="time-line">À partir de 19 h</span></div></div>
+  </div>
+  <div class="card-body">
+   <div class="info"><h3>Date & heure</h3><p>Samedi 21 novembre 2026<br>À partir de 19 h</p></div>
+   <div class="info"><h3>Lieu</h3><p>Le lieu sera communiqué ultérieurement.</p></div>
+   <div class="info"><h3>Dress code</h3><p>Rose, fuchsia, orange, corail et jaune beurre.</p><div class="palette"><i class="swatch" style="background:#ff69b4"></i><i class="swatch" style="background:#d72d78"></i><i class="swatch" style="background:#ff7438"></i><i class="swatch" style="background:#ff5b55"></i><i class="swatch" style="background:#ffe58a"></i></div></div>
+   <div class="info"><h3>Consigne</h3><p>Chaque invité doit apporter une bouteille d'alcool.</p></div>
+   <div class="info"><h3>Ambiance</h3><p>Une soirée festive, tropicale et pleine de souvenirs.</p></div>
+   <div class="info"><h3>Le mot de Ricia</h3><p>Hâte de célébrer cette nouvelle année avec vous.</p><p style="margin-top:8px;font-weight:700;color:var(--magenta)">N’oubliez pas vos maillots de bain !</p></div>
+  </div>
+  <section class="rsvp">
+   <div class="eyebrow">Let us know</div><h3>Votre présence</h3><p class="rsvp-intro">Merci d'indiquer votre nom, votre présence et votre préférence de boisson.</p>
+   <form class="rsvp-form" id="rsvpForm">
+    <label for="guestName">Prénom et nom</label><input id="guestName" type="text" required placeholder="Votre nom">
+    <label for="attendance">Serez-vous présent(e) ?</label><select id="attendance" required><option value="">Choisir une réponse</option><option value="oui">Oui, je serai présent(e)</option><option value="non">Non, je ne pourrai pas venir</option></select>
+    <label>Votre choix de boisson</label>
+    <div class="drink-grid">
+     <label class="drink-option"><input type="radio" name="drink" value="Cocktails alcoolisés" required><span>Cocktails alcoolisés</span></label>
+     <label class="drink-option"><input type="radio" name="drink" value="Cocktails sans alcool"><span>Cocktails sans alcool</span></label>
+     <label class="drink-option"><input type="radio" name="drink" value="Sombrero"><span>Sombrero</span></label>
+     <label class="drink-option"><input type="radio" name="drink" value="Regab"><span>Regab</span></label>
+     <label class="drink-option"><input type="radio" name="drink" value="Booster Zombie"><span>Booster Zombie</span></label>
+     <label class="drink-option"><input type="radio" name="drink" value="Booster Tropicale"><span>Booster Tropicale</span></label>
+     <label class="drink-option"><input type="radio" name="drink" value="Booster Racine"><span>Booster Racine</span></label>
+     <label class="drink-option"><input type="radio" name="drink" value="Champagne"><span>Champagne</span></label>
+     <label class="drink-option"><input type="radio" name="drink" value="Martini"><span>Martini</span></label>
+     <label class="drink-option"><input type="radio" name="drink" value="Vin blanc"><span>Vin blanc</span></label>
+    </div>
+    <button class="btn" type="submit">Envoyer ma réponse</button>
+    <p id="formMessage" class="rsvp-intro" aria-live="polite">Le formulaire doit être connecté à la feuille de réponses avant de pouvoir enregistrer les confirmations.</p>
+   </form>
+   <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:28px"><button class="btn" type="button" id="printInvite" aria-label="Afficher l’invitation statique en PDF">Cliquez pour afficher l’invitation statique</button><button class="btn outline" type="button" id="showGallery">Voir les autres photos</button></div>
+   <div id="gallery" hidden style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:22px">
+    <img src="assets/ricia-01.jpg" alt="Photo de Ricia 1" style="width:100%;height:260px;object-fit:contain;background:#f4d9df">
+    <img src="assets/ricia-02.jpg" alt="Photo de Ricia 2" style="width:100%;height:260px;object-fit:contain;background:#f4d9df">
+    <img src="assets/ricia-04.jpg" alt="Photo de Ricia 4" style="width:100%;height:260px;object-fit:contain;background:#f4d9df">
+   </div>
+  </section>
+ </article>
+</section>
+<section class="section orange">
+ <div class="section-head"><div><div class="eyebrow">The dress code</div><h2>Habillez-vous<br>pour le sunset.</h2></div><p>Une palette chaude, lumineuse et assumée. Choisissez une ou plusieurs couleurs de l'univers Tequila Sunset.</p></div>
+ <div style="max-width:1100px;margin:auto;display:flex;flex-wrap:wrap;gap:12px">
+  <span style="padding:14px 20px;background:#ff69b4;border-radius:100px;color:#321820">Rose bonbon</span><span style="padding:14px 20px;background:#d72d78;border-radius:100px;color:#fff7e9">Fuchsia</span><span style="padding:14px 20px;background:#ff7438;border-radius:100px">Orange</span><span style="padding:14px 20px;background:#ff5b55;border-radius:100px">Corail</span><span style="padding:14px 20px;background:#ffe58a;border-radius:100px">Jaune beurre</span>
+ </div>
+</section>
+<footer><span>TEQUILA SUNSET / RICIA</span><span>21.11.2026 · 19 H</span><span>THE BIRTHDAY EDITION</span></footer>
+<script>
+const envelope = document.getElementById('envelope');
+let opened = false;
+function revealInvitation() {
+  if (opened || !envelope) return;
+  const cover = document.querySelector('.landing-composition');
+  const card = document.getElementById('inviteCard');
+  if (!cover || !card) {
+    console.error('Ouverture impossible : conteneur ou carte introuvable.');
+    return;
+  }
+  opened = true;
+  envelope.setAttribute('aria-expanded', 'true');
+  cover.appendChild(card);
+  card.classList.add('physical-emerging');
+  cover.classList.add('opening');
+  window.setTimeout(() => {
+    document.body.classList.add('revealed');
+    card.classList.remove('physical-emerging');
+    card.classList.add('physical-settled');
+    cover.insertAdjacentElement('afterend', card);
+    const caption = document.getElementById('openCaption');
+    if (caption) caption.textContent = 'Votre invitation est ouverte';
+    card.scrollIntoView({behavior:'smooth',block:'start'});
+  }, 3550);
+}
+if (envelope) envelope.addEventListener('click', revealInvitation);
+const printButton = document.getElementById('printInvite');
+if (printButton) printButton.addEventListener('click', () => {
+  /* Ouvre le PDF validé dans un nouvel onglet : l'invité peut le consulter,
+     puis l'enregistrer sur son téléphone si nécessaire. */
+  window.open('assets/Invitation_Tequila_Sunset_Ricia.pdf', '_blank', 'noopener,noreferrer');
+});
+const galleryButton = document.getElementById('showGallery');
+if (galleryButton) galleryButton.addEventListener('click', () => {
+  const gallery = document.getElementById('gallery');
+  if (!gallery) return;
+  gallery.hidden = !gallery.hidden;
+  gallery.style.display = gallery.hidden ? 'none' : 'grid';
+});
+/* RSVP : coller ici l'URL de l'application Web Google Apps Script après son déploiement. */
+const RSVP_ENDPOINT = 'https://script.google.com/macros/s/AKfycbzFUw-Jr56UxPwr9LiHvnYlpYxs8KKwHTwF2mlhvY4rf-4o5XiPx_GnCaZKeDwaNF17SA/exec';
+const rsvpForm = document.getElementById('rsvpForm');
+if (rsvpForm) rsvpForm.addEventListener('submit', async event => {
+  event.preventDefault();
+  const message = document.getElementById('formMessage');
+  const submitButton = rsvpForm.querySelector('button[type=submit]');
+  const endpointReady = RSVP_ENDPOINT.startsWith('https://script.google.com/macros/s/') && RSVP_ENDPOINT.endsWith('/exec');
+  if (!endpointReady) {
+    if (message) message.textContent = 'Le formulaire n’est pas encore connecté. Le propriétaire du site doit terminer la configuration de l’enregistrement avant de recevoir les réponses.';
+    return;
+  }
+  const selectedDrink = rsvpForm.querySelector('input[name="drink"]:checked');
+  const payload = {
+    name: document.getElementById('guestName').value.trim(),
+    attendance: document.getElementById('attendance').value,
+    drink: selectedDrink ? selectedDrink.value : '',
+    event: 'Ricia 22 — Tequila Sunset',
+    submittedAt: new Date().toISOString()
+  };
+  if (!payload.name || !payload.attendance || !payload.drink) {
+    if (message) message.textContent = 'Merci de remplir tous les champs et de choisir une boisson.';
+    return;
+  }
+  if (submitButton) { submitButton.disabled = true; submitButton.textContent = 'Envoi en cours…'; }
+  if (message) message.textContent = 'Envoi de votre réponse…';
+  try {
+    /* Apps Script reçoit text/plain pour éviter une requête CORS preflight. */
+    await fetch(RSVP_ENDPOINT, { method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify(payload) });
+    if (message) message.textContent = 'Votre demande d’envoi a été transmise. Comme Google masque la confirmation technique du navigateur, le propriétaire devra vérifier que la réponse apparaît dans le tableau des invités.';
+    rsvpForm.reset();
+  } catch (error) {
+    if (message) message.textContent = 'L’envoi a échoué. Vérifiez votre connexion ou réessayez plus tard.';
+  } finally {
+    if (submitButton) { submitButton.disabled = false; submitButton.textContent = 'Envoyer ma réponse'; }
+  }
+});
+</script>
+
+
+<style id="decorations-size-and-blending-v4">
+/* Agrandir les visuels originaux et les intégrer à la scène sans toucher à la taille de l’enveloppe. */
+#open .decor { image-rendering:auto; }
+#open .decor-flower {
+  width:clamp(132px,17vw,164px);
+  height:auto; object-fit:contain; z-index:3;
+  filter:drop-shadow(0 7px 8px #87354b20);
+}
+#open .flower-a { left:-1%; top:42%; transform:rotate(-13deg); }
+#open .flower-b { right:-1%; top:48%; transform:rotate(13deg) scaleX(-1); }
+#open .decor-citrus {
+  width:clamp(148px,19vw,184px); height:auto; object-fit:contain;
+  clip-path:none!important; z-index:1;
+  filter:drop-shadow(0 7px 8px #a74b2510);
+}
+#open .citrus-a { left:-1.5%; top:57%; transform:rotate(-9deg); }
+#open .citrus-b { right:-1%; top:40%; transform:rotate(9deg); }
+#open .decor-cocktail {
+  left:3%; bottom:3%; width:clamp(112px,14vw,140px); height:auto;
+  object-fit:contain; z-index:4; transform:rotate(-5deg);
+  filter:drop-shadow(0 7px 8px #69324720);
+}
+#open .decor-disco { right:3%; bottom:12%; width:clamp(64px,8vw,78px); z-index:3; }
+@media(max-width:700px){
+  #open .decor-flower { width:clamp(100px,27vw,124px); }
+  #open .flower-a { left:-4%; top:43%; }
+  #open .flower-b { right:-4%; top:49%; }
+  #open .decor-citrus { width:clamp(112px,31vw,140px); }
+  #open .citrus-a { left:-7%; top:58%; }
+  #open .citrus-b { right:-7%; top:41%; }
+  #open .decor-cocktail { left:-2%; bottom:5%; width:clamp(94px,26vw,116px); }
+  #open .decor-disco { right:-1%; bottom:12%; width:clamp(48px,13vw,62px); }
+}
+</style>
+
+
+<style id="v11-single-realistic-wax-seal">
+/* V11: un seul sceau réaliste, sans le disque décoratif CSS de l’ancienne version. */
+.landing-composition .env-seal{
+  width:clamp(88px,14vw,116px)!important;
+  height:auto!important; aspect-ratio:auto!important;
+  background:transparent!important; border:0!important; border-radius:0!important;
+  box-shadow:none!important; padding:0!important;
+  object-fit:contain!important;
+  filter:drop-shadow(0 5px 5px rgba(91,43,18,.30))!important;
+}
+.landing-composition .env-seal::before,.landing-composition .env-seal::after{content:none!important;display:none!important}
+@media(max-width:600px){.landing-composition .env-seal{width:clamp(78px,23vw,98px)!important}}
+</style>
+
+
+<style id="tequila-opening-refinement">
+/* Ouverture plus lisible : la carte sort réellement de l’enveloppe avant le défilement. */
+#open .cover-art-wrap.opening .cover-envelope-hotspot{pointer-events:none}
+#open .invite-card.physical-emerging{will-change:transform,opacity}
+@media(prefers-reduced-motion:reduce){#open .invite-card.physical-emerging{animation-duration:.01ms!important}}
+</style>
+
+
+<script id="interactive-cover-js-v13">
+(() => {
+  const cover = document.getElementById('tsCover');
+  const details = document.getElementById('tsDetailsButton');
+  const rsvp = document.getElementById('tsRsvpButton');
+  const envelope = document.getElementById('envelope');
+  const card = document.getElementById('inviteCard');
+  const form = document.getElementById('rsvpForm');
+  function revealDetails() {
+    if (!cover) return;
+    cover.hidden = true;
+    document.body.classList.remove('ts-cover-active');
+    const target = document.getElementById('open');
+    if (target) target.scrollIntoView({behavior:'smooth', block:'start'});
+    if (envelope && !envelope.classList.contains('open')) envelope.click();
+  }
+  function revealRsvp() {
+    revealDetails();
+    window.setTimeout(() => {
+      if (card && !card.classList.contains('show') && envelope) envelope.click();
+      window.setTimeout(() => {
+        if (card) card.classList.add('show');
+        if (form) {
+          form.scrollIntoView({behavior:'smooth', block:'start'});
+          const name = document.getElementById('guestName');
+          if (name) window.setTimeout(() => name.focus({preventScroll:true}), 500);
+        }
+      }, 950);
+    }, 100);
+  }
+  if (details) details.addEventListener('click', revealDetails);
+  if (rsvp) rsvp.addEventListener('click', revealRsvp);
+})();
+</script>
+
+</body></html>
+<style id="sunset-invitation-art-direction">
+/* La surprise reste cachée jusqu'au clic sur le sceau. */
+.cover-event-top,.cover-event-bottom{display:none!important}
+/* Une carte d'anniversaire tropicale, colorée et éditoriale — pas de fond administratif blanc. */
+body.revealed{background:#f4a0b7;color:#42152b;background-image:radial-gradient(circle at 7% 8%,#ffdf87 0 5px,transparent 6px),radial-gradient(circle at 94% 18%,#f75a91 0 8px,transparent 9px),radial-gradient(circle at 5% 78%,#ff7a45 0 7px,transparent 8px),radial-gradient(circle at 96% 87%,#ffe58a 0 6px,transparent 7px)}
+body.revealed #open{background:linear-gradient(145deg,#f7a6c2,#f9c4a0 45%,#ffdb83);padding:clamp(18px,4vw,52px);position:relative;overflow:hidden}
+body.revealed #open:before,body.revealed #open:after{content:"✿  ✦  ❋  ✦  ✿";position:absolute;pointer-events:none;color:#d72d78;font-size:clamp(22px,4vw,42px);letter-spacing:.28em;opacity:.7;z-index:0}
+body.revealed #open:before{top:15px;left:3%;transform:rotate(-8deg)}
+body.revealed #open:after{bottom:12px;right:3%;transform:rotate(8deg);color:#b75c28}
+body.revealed #open .invite-card{position:relative;z-index:1;max-width:1020px;border:2px solid #f5cc67;outline:1px solid #d72d78;outline-offset:5px;border-radius:4px;overflow:hidden;background:#ffdb83;box-shadow:0 30px 80px #6c183b3d}
+body.revealed .card-hero{background:linear-gradient(135deg,#d72d78 0%,#f34c86 42%,#ff8248 100%);color:#fff7e9;position:relative;isolation:isolate}
+body.revealed .card-hero:after{content:"";position:absolute;inset:0;z-index:-1;opacity:.24;background:repeating-linear-gradient(135deg,transparent 0 22px,#ffe58a 23px 25px,transparent 26px 48px),radial-gradient(circle at 90% 12%,#ffe58a 0 5px,transparent 6px)}
+body.revealed .card-photo-wrap{background:#ff8e70;border:8px solid #ffdb83;position:relative}
+body.revealed .card-photo-wrap:after{content:"";position:absolute;inset:8px;border:1px solid #ffe58a;pointer-events:none}
+body.revealed .card-title{color:#fff7e9}
+body.revealed .card-title .overline{color:#ffe58a}
+body.revealed .card-title h2{color:#fff7e9;text-shadow:0 3px 0 #a91d59}
+body.revealed .card-title h2 em{color:#ffe58a}
+body.revealed .card-title .meta{border-top:1px solid #ffe58a;color:#fff7e9}
+body.revealed .card-title .meta .birthday-line{color:#ffe58a;font-weight:700}
+body.revealed .card-title .meta .time-line{color:#fff1cb}
+body.revealed .card-birthday-badge{background:#ffdb83;color:#8e214c;border:1px solid #fff1b5;box-shadow:0 5px 16px #64153b25}
+body.revealed .card-birthday-badge strong{color:#d72d78}
+body.revealed .card-body{background-color:#ffdb83;background-image:radial-gradient(circle at 12px 12px,#f2a0ae 1.5px,transparent 2px),radial-gradient(circle at 30px 30px,#ffeab0 1.5px,transparent 2px);background-size:42px 42px;border-top:2px solid #d72d78}
+body.revealed .info{background:#fff0d2e8;border:1px solid #ed9b8b;padding:18px;border-radius:3px;box-shadow:0 7px 18px #84204412}
+body.revealed .info h3{color:#c32368}
+body.revealed .rsvp{background:linear-gradient(135deg,#f05b91,#d72d78);color:#fff7e9;border-top:3px solid #ffdb83;position:relative}
+body.revealed .rsvp h3{color:#ffe58a}
+body.revealed .rsvp-intro,body.revealed .rsvp-form label{color:#fff7e9}
+body.revealed .rsvp-form input[type=text],body.revealed .rsvp-form select{color:#fff7e9;border-bottom-color:#ffe58a}
+body.revealed .rsvp-form input::placeholder{color:#ffe6e9}
+body.revealed .btn{background:#ffdb83;color:#8e214c;border:1px solid #fff0b8}
+body.revealed .btn:hover{background:#fff0c6}
+body.revealed .btn.outline{background:transparent;color:#fff7e9;border-color:#ffe58a}
+body.revealed footer{background:#8e214c;color:#ffe58a}
+@media(max-width:700px){body.revealed #open{padding:18px 12px 30px}body.revealed .card-photo-wrap{border-width:5px}body.revealed .info{padding:13px}}
+</style>
+
+<style id="readability-fix">
+/* Contraste renforcé pour les choix de boissons */
+.drink-option{background:#fffaf2!important;border:1px solid #d85a86!important;border-radius:3px;cursor:pointer;transition:background .18s,border-color .18s,transform .18s}
+.drink-option span{color:#572039!important;font-weight:600!important;opacity:1!important}
+.drink-option input{accent-color:#d92b78!important}
+.drink-option:has(input:checked){background:#ffe18a!important;border-color:#c92770!important;box-shadow:0 0 0 2px #d92b7820}
+.drink-option:hover{border-color:#d92b78!important;transform:translateY(-1px)}
+@media(max-width:600px){.drink-grid{grid-template-columns:1fr!important}.drink-option{min-height:54px}}
+</style>
+
+<style id="v9-citrus-and-seal-polish">
+/* V9 : agrumes détourés, décorations plus fondues, sceau doré validé. */
+.landing-composition .decor-citrus,#open .decor-citrus{clip-path:none!important;-webkit-mask-image:none!important;mask-image:none!important;object-fit:contain;filter:drop-shadow(0 5px 7px rgba(150,65,40,.13));}
+.landing-composition .citrus-a{left:2%;top:59%;width:clamp(108px,18vw,166px);transform:rotate(-9deg);}
+.landing-composition .citrus-b{right:2%;top:25%;width:clamp(104px,17vw,158px);transform:rotate(11deg);}
+.landing-composition .decor-cocktail{width:clamp(86px,14vw,130px);filter:drop-shadow(0 7px 8px rgba(105,50,39,.17));}
+.landing-composition .env-seal{filter:drop-shadow(0 6px 5px rgba(91,43,18,.38)) drop-shadow(0 1px 1px rgba(255,241,176,.7));}
+@media(max-width:600px){.landing-composition .citrus-a{left:-2%;top:61%;width:clamp(84px,25vw,118px)}.landing-composition .citrus-b{right:-2%;top:29%;width:clamp(82px,24vw,114px)}.landing-composition .decor-cocktail{left:0;bottom:10%;width:clamp(76px,23vw,104px)}}
+</style>
+
+
+<style id="seal-hotspot-interaction-v17">
+#tsCover{transition:opacity .65s ease,transform .8s ease}
+.ts-cover-art{background-size:contain!important;background-position:center center!important;transition:transform 1.05s cubic-bezier(.2,.8,.2,1),filter .8s ease; transform-origin:52% 52%;}
+#tsSealHotspot{position:absolute;left:52%;top:63%;transform:translate(-50%,-50%);width:clamp(66px,8.5%,92px);aspect-ratio:1;border:0;border-radius:50%;background:transparent;z-index:10;cursor:pointer;touch-action:manipulation;-webkit-tap-highlight-color:transparent;}
+#tsSealHotspot:focus-visible{outline:3px solid #fff0ad;outline-offset:5px;box-shadow:0 0 0 8px #b7256570}
+.ts-seal-hint{display:none!important}
+.ts-opening-glow{position:absolute;left:52%;top:63%;width:8%;aspect-ratio:1;border-radius:50%;pointer-events:none;transform:translate(-50%,-50%) scale(.2);opacity:0;background:radial-gradient(circle,#fff9cf 0,#ffdf83 25%,#ff75a9 55%,transparent 72%);z-index:8}
+#tsCover.ts-cover-opening .ts-cover-art{transform:scale(1.055);filter:saturate(1.08) brightness(1.04)}
+#tsCover.ts-cover-opening .ts-opening-glow{animation:sealBurst .9s ease-out forwards}
+#tsCover.ts-cover-opening .ts-seal-hint{display:none!important}
+#tsCover.ts-cover-leaving{opacity:0;transform:scale(1.04);pointer-events:none}
+@keyframes sealBurst{0%{opacity:0;transform:translate(-50%,-50%) scale(.2)}30%{opacity:1}100%{opacity:0;transform:translate(-50%,-50%) scale(7)}}
+@keyframes hintPulse{0%,100%{box-shadow:0 5px 18px #54152d20}50%{box-shadow:0 5px 22px #d72d7860}}
+@media(max-width:600px){
+ #tsCover{padding:8px}
+ .ts-cover-art{width:100%;height:calc(100svh - 16px);height:calc(100dvh - 16px);min-height:0;background-size:contain!important;background-position:center center!important}
+ #tsSealHotspot{left:52%;top:63%;width:13%;min-width:60px;max-width:82px}
+ .ts-seal-hint{display:none!important}
+}
+@media(prefers-reduced-motion:reduce){.ts-seal-hint{display:none!important}#tsCover,.ts-cover-art{transition:none}.ts-opening-glow{animation:none!important}}
+</style>
+<script id="seal-hotspot-interaction-js-v17">
+(() => {
+ const cover=document.getElementById('tsCover');
+ const hotspot=document.getElementById('tsSealHotspot');
+ let started=false;
+ if(!cover||!hotspot)return;
+ hotspot.addEventListener('click',()=>{
+   if(started)return; started=true;
+   cover.classList.add('ts-cover-opening');
+   hotspot.disabled=true;
+   window.setTimeout(()=>{
+     cover.classList.add('ts-cover-leaving');
+     window.setTimeout(()=>{
+       cover.hidden=true;
+       document.body.classList.remove('ts-cover-active');
+       /* Ne pas déclencher l'ancienne enveloppe HTML (#envelope).
+          On affiche directement la carte détaillée actuelle après l'affiche d'accueil. */
+       document.body.classList.add('revealed');
+       const card=document.getElementById('inviteCard');
+       if(card){
+         card.classList.add('show');
+         card.classList.remove('physical-emerging','physical-settled');
+         card.scrollIntoView({behavior:'smooth',block:'start'});
+       }
+     },650);
+   },700);
+ });
+})();
+</script>

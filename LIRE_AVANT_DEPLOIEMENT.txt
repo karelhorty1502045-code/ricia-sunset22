@@ -1,0 +1,15 @@
+TEQUILA SUNSET — VERSION 14 PRÉPARÉE POUR LE DÉPLOIEMENT
+
+- La page d'accueil conserve son affiche et ses éléments interactifs.
+- L'ouverture de l'enveloppe dévoile la carte détaillée.
+- Le bouton « Télécharger mon invitation en PDF » télécharge maintenant le PDF validé (2 pages : invitation + dress code) au lieu d'ouvrir la boîte d'impression.
+- Les fichiers d'images sont conservés.
+- L'URL Google Apps Script configurée dans le formulaire RSVP est conservée. Après déploiement, faire un envoi test et vérifier la ligne ajoutée dans Google Sheets.
+
+Déploiement : importer ce dossier dans un dépôt GitHub puis connecter ce dépôt à Vercel.
+
+
+VERSION 15 — Corrections demandées
+- La page d'accueil interactive et les animations de l'enveloppe sont conservées.
+- Le bouton de la carte affiche désormais « Cliquez pour afficher l’invitation statique » et ouvre le PDF validé dans un nouvel onglet.
+- Le PDF reste dans assets/Invitation_Tequila_Sunset_Ricia.pdf.
